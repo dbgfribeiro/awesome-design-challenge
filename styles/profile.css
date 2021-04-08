@@ -1,0 +1,14 @@
+.profile-header{
+    padding: 1%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+}
+.profile-header-controls{
+    display: flex;
+    justify-content: flex-end;
+    width: 40%;
+}
+.profile-header-controls button{
+    margin: 0 1%;
+}

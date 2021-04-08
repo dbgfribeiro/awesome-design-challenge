@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Space Mono', monospace;
+}
+
+p, a, button {
+  font-size: 1em;
+}
+
+button {
+  background-color: #e21339;
+  color: #ffffff;
+  text-decoration: none;
+  border: none;
+  font-weight: bolder;
+  padding: 2%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+.side-bar {
+  background-color: #1f1f1f;
+  width: 20%;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  border-right: 2px solid #505050;
+}
+
+.side-bar-menu {
+  margin-top: 10%;
+  padding: 4% 10%;
+}
+
+.side-bar-menu ul li {
+  list-style: none;
+  margin: 4% 0;
+}
+
+.side-bar-menu a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.side-bar-menu a:hover {
+  color: #e21339;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+}
+
+.side-bar-menu button:hover {
+  background-color: #ffffff;
+  color: #e21339;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
+}
+
+.display {
+  background-color: #1f1f1f;
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.display-container {
+  background-color: #ffffff;
+  width: 95%;
+  height: 95%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 5px;
+}
+/*# sourceMappingURL=style.css.map */
