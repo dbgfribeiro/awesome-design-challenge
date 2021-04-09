@@ -15,7 +15,11 @@
     <div class="side-bar">
         <div class="side-bar-menu">
             <ul>
-                <li><button type="button">PROFILE</button></li>
+                <li>
+                    <form action="profile.html">
+                        <input type="submit" value="PROFILE">
+                    </form>
+                </li>
                 <li><a href="#">Vacation Periods</a></li>
                 <li><a href="#">Ledger Vacation Days</a></li>
                 <li><a href="#">Credentials</a></li>
@@ -29,26 +33,382 @@
                 <li><a href="#">Offices</a></li>
                 <li><a href="#">Servers</a></li>
                 <li><a href="#">Gadgets</a></li>
-                <li><a href="#">Projetc Allocations</a></li>
+                <li><a href="project-allocations.html">Projetc Allocations</a></li>
                 <li><a href="#">Spotify Families</a></li>
                 <li><a href="#">Customers</a></li>
                 <li><a href="#">Permissions</a></li>
                 <li><a href="#">Roles</a></li>
                 <li><a href="#">Gadget Types</a></li>
-                <li><button type="button">LOGOUT</button></li>
+                <li>
+                    <form action="#">
+                        <input type="submit" value="LOGOUT">
+                    </form>
+                </li>
             </ul>
         </div>
     </div>
 
+
     <div class="display">
         <div class="display-container display-profile">
-            <div class="profile-header">
-                <h2>Show<span id="profileId">#6</span> <span id="profileName">Renato Vaz</span></h2>
-                <div class="profile-header-controls">
+            <div class="display-header profile-header">
+                <h2>Show#6 Renato Vaz</h2>
+                <div class="header-controls">
                     <button type="">LOGOUT</button>
-                    <button type="">Edit<span id="profileId">#6</span> <span id="profileName">Renato Vaz</span></button>
+                    <button type="">Edit#6 Renato Vaz</span></button>
                 </div>
             </div>
+
+            <div class="profile-info">
+                <table class="main-table">
+                    <tr>
+                        <th>Employee Number</th>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <th>Locked at</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>Active</th>
+                        <td>true</td>
+                    </tr>
+                    <tr>
+                        <th>Office</th>
+                        <td><a href="#">Leiria Office</a></td>
+                    </tr>
+                    <tr>
+                        <th>Permission</th>
+                        <td><a href="#">User</a></td>
+                    </tr>
+                    <tr>
+                        <th>Photo</th>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <th>First Name</th>
+                        <td>Renato</td>
+                    </tr>
+                    <tr>
+                        <th>Last Name</th>
+                        <td>Vaz</td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <td>renatovaz@redligthsoft.com</td>
+                    </tr>
+                    <tr>
+                        <th>Birthday</th>
+                        <td>1991-02-09</td>
+                    </tr>
+                    <tr>
+                        <th>Username</th>
+                        <td>renatovaz</td>
+                    </tr>
+                    <tr>
+                        <th>Slack username</th>
+                        <td>renato</td>
+                    </tr>
+                    <tr>
+                        <th>Github</th>
+                        <td>rvaz</td>
+                    </tr>
+                    <tr>
+                        <th>Skype</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>Title</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>Phone</th>
+                        <td>+351 912 345 678</td>
+                    </tr>
+                    <tr>
+                        <th>Employment end date</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>Employment end date</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>External</th>
+                        <td>false</td>
+                    </tr>
+                    <tr>
+                        <th>Holidays Remaining</th>
+                        <td></td>
+                    </tr>
+                </table>
+                <div class="horizontal-table holidays">
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>Nº total de dias de férias</th>
+                            <th>Nº dias marcados</th>
+                            <th>Nº dias por marcar</th>
+                        </tr>
+                        <tr>
+                            <td>2016</td>
+                            <td>22.0</td>
+                            <td>22.0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>2017</td>
+                            <td>22.0</td>
+                            <td>22.0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>2018</td>
+                            <td>22.0</td>
+                            <td>22.0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>2019</td>
+                            <td>22.0</td>
+                            <td>22.0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>2020</td>
+                            <td>22.0</td>
+                            <td>22.0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>2021</td>
+                            <td>22.0</td>
+                            <td>33.0</td>
+                            <td>-11.0</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td style="font-weight: bolder;">Total:</td>
+                            <td>-11.0</td>
+                        </tr>
+                      </table>
+                </div>
+
+
+                <table class="main-table">
+                    <tr>
+                        <th>Vacations Periods</th>
+                        <td></td>
+                    </tr>
+                </table>
+                <div class="horizontal-table vacations">
+                    <table>
+                        <tr>
+                            <th>Id</th>
+                            <th>Person</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Workingdays</th>
+                            <th>Half Day</th>
+                            <th>Approved</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td>466</td>
+                            <td>#6 Renato Vaz</td>
+                            <td>2021-12-19</td>
+                            <td>2021-12-31</td>
+                            <td>10</td>
+                            <td>false</td>
+                            <td>true</td>
+                            <td>Edit</td>
+                        </tr>
+                        <tr>
+                            <td>465</td>
+                            <td>#6 Renato Vaz</td>
+                            <td>2021-12-01</td>
+                            <td>2021-12-04</td>
+                            <td>3</td>
+                            <td>false</td>
+                            <td>true</td>
+                            <td>Edit</td>
+                        </tr>
+                        <tr>
+                            <td>464</td>
+                            <td>#6 Renato Vaz</td>
+                            <td>2021-08-01</td>
+                            <td>2021-08-14</td>
+                            <td>10</td>
+                            <td>false</td>
+                            <td>true</td>
+                            <td>Edit</td>
+                        </tr>
+                        <tr>
+                            <td>378</td>
+                            <td>#6 Renato Vaz</td>
+                            <td>2020-12-30</td>
+                            <td>2020-12-31</td>
+                            <td>2</td>
+                            <td>false</td>
+                            <td>true</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>349</td>
+                            <td>#6 Renato Vaz</td>
+                            <td>2020-08-16</td>
+                            <td>2021-08-31</td>
+                            <td>11</td>
+                            <td>false</td>
+                            <td>true</td>
+                            <td></td>
+                        </tr>
+                      </table>
+                      <ul>
+                          <li><a href="#" style="opacity: 0.35;">previous</a></li>
+                          <li class="dot"><a href="#"></a></li>
+                          <li class="dot"><a href="#"></a></li>
+                          <li class="dot"><a href="#"></a></li>
+                          <li class="dot"><a href="#"></a></li>
+                          <li class="dot"><a href="#"></a></li>
+                          <li class="dot"><a href="#"></a></li>
+                          <li><a href="#">next</a></li>
+                          <li><a href="#">last</a></li>
+                      </ul>
+                </div>
+
+                <table class="main-table">
+                    <tr>
+                        <th>Projects</th>
+                        <td></td>
+                    </tr>
+                </table>
+                <div class="horizontal-table projects">
+                    <table>
+                        <tr>
+                            <th>Color</th>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Status</th>
+                            <th>Customer</th>
+                            <th>Person Responsible</th>
+                            <th>Start Date</th>
+                        </tr>
+                        <tr>
+                            <td><div class="color" style="background: #DF9234;"></div></td>
+                            <td>1</td>
+                            <td>GoGoInspectorGadget</td>
+                            <td>done</td>
+                            <td>Production Co</td>
+                            <td>#7 João Gonçalves</td>
+                            <td>2018-05-17</td>
+                        </tr>
+                        <tr>
+                            <td><div class="color" style="background: #E21339;"></div></td>
+                            <td>2</td>
+                            <td>Plae</td>
+                            <td>ongoing</td>
+                            <td>RedLight Software</td>
+                            <td>#7 Francisco Magalhães</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><div class="color" style="background: #F5ACBA;"></div></td>
+                            <td>12</td>
+                            <td>Enterprises & Associates Sites</td>
+                            <td>ongoing</td>
+                            <td>E&A Co</td>
+                            <td>#7 João Gonçalves</td>
+                            <td>2019-12-01</td>
+                        </tr>
+                    </table>
+                </div>
+
+
+                <table class="main-table">
+                    <tr>
+                        <th>Competences</th>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <th>Roles</th>
+                        <td></td>
+                    </tr>
+                </table>
+                <div class="horizontal-table roles">
+                    <table>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Designer</td>
+                        </tr>
+                    </table>
+                </div>
+
+
+                <table class="main-table">
+                    <tr>
+                        <th>Ssh keys</th>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <th>Created at</th>
+                        <td>Wed, 16 May 2018 19:06:33 +0000</td>
+                    </tr>
+                    <tr>
+                        <th>Updated at</th>
+                        <td>Wed, 31 Mar 2021 13:10:06 +0000</td>
+                    </tr>
+                    <tr>
+                        <th>Reset password token</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>Reset password sent at</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>Remember created at</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>Sign in count</th>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <th>Current sign in at</th>
+                        <td>Wed, 31 Mar 2021 13:10:06 +0000</td>
+                    </tr>
+                    <tr>
+                        <th>Last sign in at</th>
+                        <td>Tue, 29 Jan 2019 13:24:08 +0000</td>
+                    </tr>
+                    <tr>
+                        <th>Current sign in IP</th>
+                        <td>66.330.80.123</td>
+                    </tr>
+                    <tr>
+                        <th>Last sign in IP</th>
+                        <td>72.106.80.240</td>
+                    </tr>
+                    <tr>
+                        <th>Failed attemps</th>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <th>Unlock token</th>
+                        <td></td>
+                    </tr>
+                </table>
+
+
+            </div>
+
+
         </div>
     </div>
     

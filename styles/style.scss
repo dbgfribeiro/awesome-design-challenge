@@ -1,5 +1,6 @@
 $dark: #1f1f1f;
-$gray: #505050;
+$gray: #444444;
+$lightGray: #c2c2c2;
 $red: #e21339;
 $white: #ffffff;
 
@@ -8,10 +9,13 @@ $white: #ffffff;
     padding: 0;
     font-family: 'Space Mono', monospace;
 }
-p,a,button{
-    font-size: 1em;
+p,a,button,tr,th{
+    font-size: 14px;
 }
-button{
+th{
+    color: $lightGray;
+}
+button, input{
     background-color: $red;
     color: $white;
     text-decoration: none;
@@ -22,12 +26,17 @@ button{
     cursor: pointer;
 }
 h2{
-    font-size: 2em;
+    font-size: 28px;
+}
+body{
+    background-color: $dark;
 }
 
+
+/*---------------SIDE-BAR---------------*/
 .side-bar{
     background-color : $dark;
-    width: 20%;
+    width: 18%;
     height: 100%;
     position: fixed;
     z-index: 1;
@@ -38,31 +47,70 @@ h2{
 }
 .side-bar-menu{
     margin-top: 10%;
-    padding: 4% 10%;
+    padding: 0 10%;
 }
 .side-bar-menu ul li{
     list-style: none;
     margin: 4% 0;
+    position: relative;
 }
+
+.side-bar-menu ul li:not(:first-child,:last-child) {
+    border-bottom: 2px solid $gray;
+}
+
 .side-bar-menu a{
     text-decoration: none;
     color: $white;
+
 }
 .side-bar-menu a:hover{
     color: $red;
     transition: width 0.5s;
 }
-.side-bar-menu button:hover{
+.side-bar-menu form{
+    width: 100%;
+}
+.side-bar-menu input{
+    width: 100%;
+}
+.side-bar-menu input:hover{
     background-color: $white;
     color: $red;
     transition: 0.5s;
     transform: scale(1.05 , 1.05);
 }
+
+
+/*---------------MAIN-CONTAINER---------------*/
+.display-header{
+    padding: 2% 0;
+    width: 94%;
+    margin: 0 auto;
+    border-bottom: 1px solid $lightGray;
+    display: flex;
+    justify-content: space-between;
+}
+.header-controls{
+    display: flex;
+    justify-content: flex-end;
+    width: 40%;
+}
+.header-controls button{
+    margin: 0 1%;
+    transition: 0.4s;
+}
+.header-controls button:hover{
+    filter: drop-shadow(0px 1px 8px rgba(31, 31, 31, 0.3));
+    transform: scale(1.05 , 1.05);
+}
+
 .display{
     background-color: $dark;
-    width: 80%;
+    width: 82%;
     height: 100%;
     position: absolute;
+    height: fit-content;
     top: 0;
     right: 0;
 }
@@ -70,10 +118,10 @@ h2{
 .display-container{
     background-color: $white;
     width: 95%;
-    height: 95%;
-    top: 50%;
     left: 50%;
-    transform: translate(-50% , -50%);
-    position: absolute;
+    margin: 2% 0;
+    padding-bottom: 2%;
+    transform: translateX(-50%);
+    position: relative;
     border-radius: 5px;
 }
