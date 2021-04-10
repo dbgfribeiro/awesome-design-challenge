@@ -4,18 +4,34 @@ $lightGray: #c2c2c2;
 $red: #e21339;
 $white: #ffffff;
 
+$mobileBreakpoint: 375px;
+
+@import './_profile';
+
 *{
     margin: 0;
     padding: 0;
     font-family: 'Space Mono', monospace;
 }
+body{
+    background-color: $dark;
+}
+h2{
+    font-size: 28px;
+    @media (max-width: $mobileBreakpoint) {
+        font-size: 16px;
+    }
+}
 p,a,button,tr,th{
     font-size: 14px;
+    @media (max-width: $mobileBreakpoint) {
+        font-size: 12px;
+    }
 }
 th{
     color: $lightGray;
 }
-button, input{
+button{
     background-color: $red;
     color: $white;
     text-decoration: none;
@@ -25,13 +41,6 @@ button, input{
     border-radius: 5px;
     cursor: pointer;
 }
-h2{
-    font-size: 28px;
-}
-body{
-    background-color: $dark;
-}
-
 
 /*---------------SIDE-BAR---------------*/
 .side-bar{
@@ -44,67 +53,81 @@ body{
     left: 0;
     overflow-y: auto;
     border-right: 2px solid $gray;
+
+    @media (max-width: $mobileBreakpoint) {
+        width: 100vw;
+        margin-left: -100vw;
+        border: none;
+    }
 }
+
 .side-bar-menu{
     margin-top: 10%;
     padding: 0 10%;
-}
-.side-bar-menu ul li{
-    list-style: none;
-    margin: 4% 0;
-    position: relative;
-}
+    ul li{
+        list-style: none;
+        margin: 4% 0;
+        position: relative;
+        display: flex;
+        &:not(:first-child):not(:last-child){
+            border-bottom: 2px solid $gray;
+        }
+    }
+    a{
+        width: 100%;
+        text-decoration: none;
+        color: $white;
+        &:hover{
+            color: $red;
+            transition: width 0.5s;
+        }
+    }
+    button{
+        width: 100%;
+        &:hover{
+            background-color: $white;
+            color: $red;
+            transition: 0.5s;
+            transform: scale(1.05 , 1.05);
+            a{
+                color: $red;
+            }
+        }
+    }
+    #close{
+        display: none;
+        @media (max-width: $mobileBreakpoint) {
+            display: block;
+            width: 10%;
+            margin-left: 1%;
+            background-color: $white;
+            color: $red;
+        }
+    }
 
-.side-bar-menu ul li:not(:first-child,:last-child) {
-    border-bottom: 2px solid $gray;
 }
+.pop-up-menu{
+    display: none;
 
-.side-bar-menu a{
-    text-decoration: none;
-    color: $white;
-
-}
-.side-bar-menu a:hover{
-    color: $red;
-    transition: width 0.5s;
-}
-.side-bar-menu form{
-    width: 100%;
-}
-.side-bar-menu input{
-    width: 100%;
-}
-.side-bar-menu input:hover{
-    background-color: $white;
-    color: $red;
-    transition: 0.5s;
-    transform: scale(1.05 , 1.05);
+    @media (max-width: $mobileBreakpoint) {
+        position: absolute;
+        display: block;
+        top: 50%;
+        transform: translateY(-50%);
+        span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin-bottom: 5px;
+            position: relative;
+            background: $red;
+            z-index: 1;
+          }
+    }
 }
 
 
 /*---------------MAIN-CONTAINER---------------*/
-.display-header{
-    padding: 2% 0;
-    width: 94%;
-    margin: 0 auto;
-    border-bottom: 1px solid $lightGray;
-    display: flex;
-    justify-content: space-between;
-}
-.header-controls{
-    display: flex;
-    justify-content: flex-end;
-    width: 40%;
-}
-.header-controls button{
-    margin: 0 1%;
-    transition: 0.4s;
-}
-.header-controls button:hover{
-    filter: drop-shadow(0px 1px 8px rgba(31, 31, 31, 0.3));
-    transform: scale(1.05 , 1.05);
-}
-
 .display{
     background-color: $dark;
     width: 82%;
@@ -113,6 +136,43 @@ body{
     height: fit-content;
     top: 0;
     right: 0;
+
+    @media (max-width: $mobileBreakpoint) {
+        width: 100%;
+    }
+}
+
+.display-header{
+    padding: 2% 0;
+    width: 94%;
+    margin: 0 auto;
+    border-bottom: 1px solid $lightGray;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $mobileBreakpoint) {
+        display: block;
+        position: relative;
+        text-align: right;
+    }
+}
+
+.header-controls{
+    display: flex;
+    justify-content: flex-end;
+    width: 40%;
+    button{
+        margin: 0 1%;
+        transition: 0.4s;
+        &:hover{
+            filter: drop-shadow(0px 1px 8px rgba(31, 31, 31, 0.3));
+            transform: scale(1.05 , 1.05);
+        }
+    }
+    @media (max-width: $mobileBreakpoint) {
+        width: 100%;
+        padding: 0;
+    }
 }
 
 .display-container{

@@ -6,19 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/profile.css">
     <title>Profile</title>
 </head>
 <body>
 
-    <div class="side-bar">
+    <div class="side-bar" id="menu">
         <div class="side-bar-menu">
             <ul>
                 <li>
-                    <form action="profile.html">
-                        <input type="submit" value="PROFILE">
-                    </form>
+                    <a href="profile.html"><button>PROFILE</button></a>
+                    <button id="close">X</button>
                 </li>
                 <li><a href="#">Vacation Periods</a></li>
                 <li><a href="#">Ledger Vacation Days</a></li>
@@ -40,9 +39,7 @@
                 <li><a href="#">Roles</a></li>
                 <li><a href="#">Gadget Types</a></li>
                 <li>
-                    <form action="#">
-                        <input type="submit" value="LOGOUT">
-                    </form>
+                    <a href="profile.html"><button>LOGOUT</button></a>
                 </li>
             </ul>
         </div>
@@ -57,6 +54,13 @@
                     <button type="">LOGOUT</button>
                     <button type="">Edit#6 Renato Vaz</span></button>
                 </div>
+
+                <div class="pop-up-menu" id="hamburguer">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
             </div>
 
             <div class="profile-info">
@@ -412,5 +416,6 @@
         </div>
     </div>
     
+    <script src="js/menu.js"></script>
 </body>
 </html>

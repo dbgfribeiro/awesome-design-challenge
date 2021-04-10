@@ -1,0 +1,81 @@
+.profile-info{
+    width: 94%;
+    margin: 2% auto;
+
+    display: none;
+}
+.display-profile .main-table{
+    width: 100%;
+    th{
+        width: 18%;
+        padding: 1% 1% 1% 0;
+        text-align: left;
+        text-transform: uppercase;
+    }
+    td{
+        padding: 1% 0;
+    }
+    a{
+        color: $red;
+    }
+}
+
+/*---------------HORIZONTAL-TABLES---------------*/
+.horizontal-table{
+    padding-bottom: 2%;
+    table {
+        width: 100%;
+        margin: 0 auto;
+        border-collapse: collapse;
+        th , td{
+            padding: 1% 0;
+            border-bottom: 1px solid $lightGray;
+        }
+        th{
+            text-transform: none;
+            color: #000;
+            text-align: left;
+        }
+    }
+}
+
+
+/*HOLIDAYS*/
+.holidays table td:first-child{
+    font-weight: bolder;
+}
+
+/*VACATIONS*/
+.vacations{
+    ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2% 0;
+        li{
+            list-style: none;
+        }
+        a{
+            color: $red;
+            padding: 0 5px;
+        }
+        .dot{
+            background-color: $red;
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            margin: 0 2px;
+            cursor: pointer;
+            &:nth-child(n+3){
+                opacity: 0.35;
+            }
+        }
+    }
+}
+
+/*PROJECTS*/
+.color{
+    width: 23px;
+    height: 23px;
+    border-radius: 5px;
+}
