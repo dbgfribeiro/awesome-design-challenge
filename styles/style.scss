@@ -23,7 +23,7 @@ h2{
         font-size: 16px;
     }
 }
-p,a,button,tr,th{
+p,a,button,tr,th,label,input{
     font-size: 14px;
     @media (max-width: $mobileBreakpoint) {
         font-size: 12px;
@@ -31,6 +31,11 @@ p,a,button,tr,th{
 }
 th{
     color: $lightGray;
+}
+input,button,select{
+    &:focus{
+        outline: 0;
+    }
 }
 button{
     background-color: $red;
@@ -41,9 +46,6 @@ button{
     padding: 2%;
     border-radius: 5px;
     cursor: pointer;
-    &:focus{
-        outline: 0;
-    }
 }
 
 /*---------------SIDE-BAR---------------*/
@@ -92,7 +94,6 @@ button{
             background-color: $white;
             color: $red;
             transition: 0.5s;
-            transform: scale(1.05 , 1.05);
             a{
                 color: $red;
             }
@@ -135,9 +136,7 @@ button{
 .display{
     background-color: $dark;
     width: 82%;
-    height: 100%;
     position: absolute;
-    height: fit-content;
     top: 0;
     right: 0;
 
@@ -148,6 +147,7 @@ button{
 
 .display-container{
     background-color: $white;
+    min-height: 90vh;
     width: 95%;
     left: 50%;
     margin: 2% 0;
@@ -159,6 +159,7 @@ button{
         margin: 4% 0;
         width: 90%;
         padding: 2%;
+        min-height: 84vh;
     }
 }
 

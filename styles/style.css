@@ -105,7 +105,7 @@
   border-radius: 5px;
 }
 
-.allocations-table {
+.allocations-info {
   width: 100%;
   margin: 0 auto;
   overflow-x: scroll;
@@ -113,98 +113,179 @@
   white-space: nowrap;
 }
 
-.allocations-table table {
+.allocations-info table {
   direction: ltr;
   border-collapse: collapse;
+  width: 100%;
+  position: relative;
 }
 
-.allocations-table table td {
-  padding: 7.5px 10px;
+.allocations-info table thead th {
+  background-color: #e21339;
+  border-radius: 5px;
+  color: #ffffff;
+  padding: 7.5px 0;
 }
 
 @media (max-width: 500px) {
-  .allocations-table table td {
+  .allocations-info table thead th {
+    padding: 5px 0;
+  }
+}
+
+.allocations-info table thead td {
+  padding: 7.5px 10px;
+  background-color: #ffffff;
+  border: 1px solid #999999;
+}
+
+@media (max-width: 500px) {
+  .allocations-info table thead td {
     padding: 2.5px 5px;
   }
 }
 
-.allocations-table table thead th {
-  background-color: #e21339;
-  border-radius: 5px;
-  color: #ffffff;
-  padding: 5px 0;
-}
-
-.allocations-table table thead td {
-  border: 1px solid #999999;
-}
-
-.allocations-table table th[scope=row] {
+.allocations-info table th[scope=row] {
   border-radius: 0;
   position: -webkit-sticky;
   position: sticky;
   left: 0;
-  z-index: 1;
-  background: #ffffff;
+  z-index: 2;
+  background-color: #ffffff;
+  outline: 1px solid #ffffff;
+  -webkit-box-shadow: 4px 0 3px -2px rgba(31, 31, 31, 0.35);
+          box-shadow: 4px 0 3px -2px rgba(31, 31, 31, 0.35);
 }
 
-.allocations-table table .employee th {
-  padding-right: 1%;
+.allocations-info table .employee th {
+  padding: 0 15px;
   text-align: left;
   left: 0;
-  border-bottom: 1px solid #999999;
   color: #1f1f1f;
 }
 
 @media (max-width: 500px) {
-  .allocations-table table .employee th {
+  .allocations-info table .employee th {
     white-space: normal;
+    padding: 0 5px;
   }
 }
 
-.allocations-table table .employee td {
+.allocations-info table .employee:nth-child(even) th {
   background-color: #F3F3F3;
-  -webkit-box-shadow: inset 1px 1px 3px 1px rgba(31, 31, 31, 0.25);
-          box-shadow: inset 1px 1px 3px 1px rgba(31, 31, 31, 0.25);
-  position: relative;
-  padding: 0;
-  border-bottom: 1px solid #999999;
+  outline: 1px solid #F3F3F3;
 }
 
-.allocations-table table .employee td .project {
+.allocations-info table .employee td {
+  background-color: #F3F3F3;
+  -webkit-box-shadow: inset 1px 1px 3px 1px rgba(31, 31, 31, 0.35);
+          box-shadow: inset 1px 1px 3px 1px rgba(31, 31, 31, 0.35);
+  position: relative;
+  padding: 0;
+  border-radius: 0px 5px 5px 0;
+}
+
+.allocations-info table .employee td .project {
   color: #ffffff;
+  font-weight: normal;
   margin: 0.5% 0;
   padding: 0.2% 1%;
   border-radius: 5px;
   text-align: right;
 }
 
-.allocations-table table .employee td .mdrev {
+@media (max-width: 500px) {
+  .allocations-info table .employee td .project p {
+    font-size: 10px;
+  }
+}
+
+.allocations-info table .employee td .mdrev {
   background-color: #87CC6F;
 }
 
-.allocations-table table .employee td .localista {
+.allocations-info table .employee td .localista {
   background-color: #1f1f1f;
 }
 
-.allocations-table table .employee td .retaileye {
+.allocations-info table .employee td .retaileye {
   background-color: #448ACB;
 }
 
-.allocations-table table .employee td .marketing {
+.allocations-info table .employee td .marketing {
   background-color: #FB8B8B;
 }
 
-.allocations-table table .employee td .rebranding {
+.allocations-info table .employee td .rebranding {
   background-color: #e4590d;
 }
 
-.allocations-table table .employee td .plae {
+.allocations-info table .employee td .plae {
   background-color: #ffb5f6;
 }
 
-.allocations-table table .employee td .sleassociates {
+.allocations-info table .employee td .sleassociates {
   background-color: #8a35c7;
+}
+
+.display-new-allocation {
+  display: none;
+}
+
+.new-allocation {
+  padding: 2% 0;
+  margin: 0 auto;
+  width: 94%;
+}
+
+.new-allocation form {
+  width: 100%;
+  margin-top: 2%;
+}
+
+.new-allocation form * {
+  width: 60%;
+  border-radius: 5px;
+  -webkit-appearance: none;
+}
+
+@media (max-width: 500px) {
+  .new-allocation form * {
+    width: 100%;
+  }
+}
+
+.new-allocation form label {
+  display: block;
+  font-weight: bolder;
+}
+
+.new-allocation form input[type=text], .new-allocation form input[type=date], .new-allocation form select {
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #999999;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #444444;
+}
+
+.new-allocation form input[type=submit] {
+  background-color: #e21339;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 10px;
+  margin: 8px 0;
+  border-style: none;
+}
+
+.new-allocation form input[type=submit]:hover {
+  -webkit-filter: drop-shadow(0px 1px 8px rgba(31, 31, 31, 0.3));
+          filter: drop-shadow(0px 1px 8px rgba(31, 31, 31, 0.3));
+  -webkit-transform: scale(1.01, 1.01);
+          transform: scale(1.01, 1.01);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 * {
@@ -227,18 +308,22 @@ h2 {
   }
 }
 
-p, a, button, tr, th {
+p, a, button, tr, th, label, input {
   font-size: 14px;
 }
 
 @media (max-width: 500px) {
-  p, a, button, tr, th {
+  p, a, button, tr, th, label, input {
     font-size: 12px;
   }
 }
 
 th {
   color: #999999;
+}
+
+input:focus, button:focus, select:focus {
+  outline: 0;
 }
 
 button {
@@ -250,10 +335,6 @@ button {
   padding: 2%;
   border-radius: 5px;
   cursor: pointer;
-}
-
-button:focus {
-  outline: 0;
 }
 
 /*---------------SIDE-BAR---------------*/
@@ -316,8 +397,6 @@ button:focus {
   color: #e21339;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  -webkit-transform: scale(1.05, 1.05);
-          transform: scale(1.05, 1.05);
 }
 
 .side-bar-menu button:hover a {
@@ -365,11 +444,7 @@ button:focus {
 .display {
   background-color: #1f1f1f;
   width: 82%;
-  height: 100%;
   position: absolute;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
   top: 0;
   right: 0;
 }
@@ -382,6 +457,7 @@ button:focus {
 
 .display-container {
   background-color: #ffffff;
+  min-height: 90vh;
   width: 95%;
   left: 50%;
   margin: 2% 0;
@@ -397,6 +473,7 @@ button:focus {
     margin: 4% 0;
     width: 90%;
     padding: 2%;
+    min-height: 84vh;
   }
 }
 

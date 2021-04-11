@@ -46,13 +46,14 @@
     </div>
 
     <div class="display">
-        <div class="display-container">
+
+        <div class="display-container display-allocations">
 
             <div class="display-header">
                 <h2>Project Allocations</h2>
             
                 <div class="header-controls">
-                    <button type="">New Person Project</span></button>
+                    <button type="" id="new">New Person Project</span></button>
                 </div>
 
                 <div class="pop-up-menu" id="hamburguer">
@@ -64,19 +65,17 @@
 
             <div class="info allocations-info">
 
-                <div class="allocations-table">
-
                     <table>
                         <thead>
                             <tr>
-                                <th scope="row" class="break"></th>
+                                <th scope="row"></th>
                                 <th colspan="11">2019</th>
                                 <th colspan="12">2020</th>
                                 <th colspan="12">2021</th>
                             </tr>
                             
                             <tr>
-                                <th scope="row" class="break"></th>
+                                <th scope="row"></th>
                                 <td>Jan</td><td>Fev</td><td>Mar</td><td>Apr</td><td>May</td><td>Jun</td><td>Jul</td><td>Aug</td><td>Sep</td><td>Nov</td><td>Dec</td>
                                 <td>Jan</td><td>Fev</td><td>Mar</td><td>Apr</td><td>May</td><td>Jun</td><td>Jul</td><td>Aug</td><td>Sep</td><td>Nov</td><td>Dec</td>
                                 <td>Jan</td><td>Fev</td><td>Mar</td><td>Apr</td><td>May</td><td>Jun</td><td>Jul</td><td>Aug</td><td>Sep</td><td>Nov</td><td>Dec</td>
@@ -88,7 +87,7 @@
                             <tr class="employee">
                                 <th scope="row">André Franco</th>
                                 <td colspan="100%">
-                                    <div class="project mdrev" style="width: 70%; margin-left: 20%;">
+                                    <h4 class="project mdrev" style="width: 70%; margin-left: 20%;">
                                         <p>MDRev (100%) - Dev</p>
                                     </div>
                                 </td>
@@ -135,18 +134,84 @@
                                     </div>
                                 </td>
                             </tr>
-                        </tbody>
-                        
-                        
 
-                    </table>
-                </div>
-
+                         </tbody>
+                        
+                </table>
             </div>
         </div>
+
+
+        <div class="display-container display-new-allocation">
+
+            <div class="display-header">
+                <h2>New Project Allocations</h2>
+            
+                <div class="header-controls">
+                    <button type="" id="back">Back</span></button>
+                </div>
+
+                <div class="pop-up-menu" id="hamburguer">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="new-allocation">
+                <form action="project-allocations.html">
+
+                    <label for="startdate">Start Date</label>
+                    <input type="date" name="startdate" required>
+
+                    <label for="enddate">End Date</label>
+                    <input type="date" name="enddate">
+
+                    <label for="person">Person</label>
+                    <select name="person" required>
+                        <option disabled value="" selected>-</option>
+                        <option value="person1">André Franco</option>
+                        <option value="person2">André Gonçalves</option>
+                        <option value="person3">Carolina Figueiredo</option>
+                        <option value="person4">João Gonçalves</option>
+                    </select>
+
+                    <label for="project">Project</label>
+                    <select name="project" required>
+                        <option disabled value="" selected>-</option>
+                        <option value="project1">MDRev</option>
+                        <option value="project2">Localista</option>
+                        <option value="project3">RetailEye</option>
+                        <option value="project4">Anotado</option>
+                        <option value="project5">Rebranding</option>
+                        <option value="project6">Plae</option>
+                        <option value="project7">Sites Leite Enterprises & Associates</option>
+                    </select>
+
+                    <label for="project">Role</label>
+                    <select name="role" required>
+                        <option disabled value="" selected>-</option>
+                        <option value="role1">Project Manager</option>
+                        <option value="role2">Marketing and Communication</option>
+                        <option value="role3">QA</option>
+                        <option value="role3">Dev</option>
+                        <option value="role4">Design</option>
+                    </select>
+
+                    <label for="allocation">Allocation</label>
+                    <input type="text" name="allocation" value="100" required>
+
+                    <input type="submit" name="create" value="Create Person Allocation">
+
+                </form>
+            </div>
+
+
+        </div>
     </div>
+
     
-    <script src="js/menu.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 </html>
