@@ -1,29 +1,33 @@
-.profile-info {
-  width: 94%;
-  margin: 2% auto;
-  display: none;
-}
-
-.display-profile .main-table {
+.profile-info .main-table {
   width: 100%;
 }
 
-.display-profile .main-table th {
+.profile-info .main-table th {
   width: 18%;
   padding: 1% 1% 1% 0;
   text-align: left;
   text-transform: uppercase;
 }
 
-.display-profile .main-table td {
-  padding: 1% 0;
-}
-
-.display-profile .main-table a {
+.profile-info .main-table a {
   color: #e21339;
 }
 
-/*---------------HORIZONTAL-TABLES---------------*/
+@media (max-width: 500px) {
+  .profile-info .main-table th {
+    padding: 3% 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .profile-info .main-table td {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    text-align: right;
+  }
+}
+
 .horizontal-table {
   padding-bottom: 2%;
 }
@@ -32,11 +36,13 @@
   width: 100%;
   margin: 0 auto;
   border-collapse: collapse;
+  overflow-x: scroll;
+  white-space: nowrap;
 }
 
 .horizontal-table table th, .horizontal-table table td {
   padding: 1% 0;
-  border-bottom: 1px solid #c2c2c2;
+  border-bottom: 1px solid #999999;
 }
 
 .horizontal-table table th {
@@ -45,12 +51,19 @@
   text-align: left;
 }
 
-/*HOLIDAYS*/
+@media (max-width: 500px) {
+  .horizontal-table table {
+    display: block;
+  }
+  .horizontal-table table td, .horizontal-table table th {
+    padding-right: 30px;
+  }
+}
+
 .holidays table td:first-child {
   font-weight: bolder;
 }
 
-/*VACATIONS*/
 .vacations ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -86,11 +99,112 @@
   opacity: 0.35;
 }
 
-/*PROJECTS*/
 .color {
   width: 23px;
   height: 23px;
   border-radius: 5px;
+}
+
+.allocations-table {
+  width: 100%;
+  margin: 0 auto;
+  overflow-x: scroll;
+  direction: rtl;
+  white-space: nowrap;
+}
+
+.allocations-table table {
+  direction: ltr;
+  border-collapse: collapse;
+}
+
+.allocations-table table td {
+  padding: 7.5px 10px;
+}
+
+@media (max-width: 500px) {
+  .allocations-table table td {
+    padding: 2.5px 5px;
+  }
+}
+
+.allocations-table table thead th {
+  background-color: #e21339;
+  border-radius: 5px;
+  color: #ffffff;
+  padding: 5px 0;
+}
+
+.allocations-table table thead td {
+  border: 1px solid #999999;
+}
+
+.allocations-table table th[scope=row] {
+  border-radius: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: #ffffff;
+}
+
+.allocations-table table .employee th {
+  padding-right: 1%;
+  text-align: left;
+  left: 0;
+  border-bottom: 1px solid #999999;
+  color: #1f1f1f;
+}
+
+@media (max-width: 500px) {
+  .allocations-table table .employee th {
+    white-space: normal;
+  }
+}
+
+.allocations-table table .employee td {
+  background-color: #F3F3F3;
+  -webkit-box-shadow: inset 1px 1px 3px 1px rgba(31, 31, 31, 0.25);
+          box-shadow: inset 1px 1px 3px 1px rgba(31, 31, 31, 0.25);
+  position: relative;
+  padding: 0;
+  border-bottom: 1px solid #999999;
+}
+
+.allocations-table table .employee td .project {
+  color: #ffffff;
+  margin: 0.5% 0;
+  padding: 0.2% 1%;
+  border-radius: 5px;
+  text-align: right;
+}
+
+.allocations-table table .employee td .mdrev {
+  background-color: #87CC6F;
+}
+
+.allocations-table table .employee td .localista {
+  background-color: #1f1f1f;
+}
+
+.allocations-table table .employee td .retaileye {
+  background-color: #448ACB;
+}
+
+.allocations-table table .employee td .marketing {
+  background-color: #FB8B8B;
+}
+
+.allocations-table table .employee td .rebranding {
+  background-color: #e4590d;
+}
+
+.allocations-table table .employee td .plae {
+  background-color: #ffb5f6;
+}
+
+.allocations-table table .employee td .sleassociates {
+  background-color: #8a35c7;
 }
 
 * {
@@ -107,7 +221,7 @@ h2 {
   font-size: 28px;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 500px) {
   h2 {
     font-size: 16px;
   }
@@ -117,14 +231,14 @@ p, a, button, tr, th {
   font-size: 14px;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 500px) {
   p, a, button, tr, th {
     font-size: 12px;
   }
 }
 
 th {
-  color: #c2c2c2;
+  color: #999999;
 }
 
 button {
@@ -136,6 +250,10 @@ button {
   padding: 2%;
   border-radius: 5px;
   cursor: pointer;
+}
+
+button:focus {
+  outline: 0;
 }
 
 /*---------------SIDE-BAR---------------*/
@@ -151,7 +269,7 @@ button {
   border-right: 2px solid #444444;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 500px) {
   .side-bar {
     width: 100vw;
     margin-left: -100vw;
@@ -210,7 +328,7 @@ button {
   display: none;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 500px) {
   .side-bar-menu #close {
     display: block;
     width: 10%;
@@ -224,7 +342,7 @@ button {
   display: none;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 500px) {
   .pop-up-menu {
     position: absolute;
     display: block;
@@ -256,9 +374,29 @@ button {
   right: 0;
 }
 
-@media (max-width: 375px) {
+@media screen and (max-width: 500px) {
   .display {
     width: 100%;
+  }
+}
+
+.display-container {
+  background-color: #ffffff;
+  width: 95%;
+  left: 50%;
+  margin: 2% 0;
+  padding-bottom: 2%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: relative;
+  border-radius: 5px;
+}
+
+@media (max-width: 500px) {
+  .display-container {
+    margin: 4% 0;
+    width: 90%;
+    padding: 2%;
   }
 }
 
@@ -266,7 +404,7 @@ button {
   padding: 2% 0;
   width: 94%;
   margin: 0 auto;
-  border-bottom: 1px solid #c2c2c2;
+  border-bottom: 1px solid #999999;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -275,7 +413,7 @@ button {
           justify-content: space-between;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 500px) {
   .display-header {
     display: block;
     position: relative;
@@ -294,7 +432,7 @@ button {
 }
 
 .header-controls button {
-  margin: 0 1%;
+  margin-left: 1%;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -306,22 +444,14 @@ button {
           transform: scale(1.05, 1.05);
 }
 
-@media (max-width: 375px) {
+@media (max-width: 500px) {
   .header-controls {
     width: 100%;
-    padding: 0;
   }
 }
 
-.display-container {
-  background-color: #ffffff;
-  width: 95%;
-  left: 50%;
-  margin: 2% 0;
-  padding-bottom: 2%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  position: relative;
-  border-radius: 5px;
+.info {
+  width: 94%;
+  margin: 2% auto;
 }
 /*# sourceMappingURL=style.css.map */

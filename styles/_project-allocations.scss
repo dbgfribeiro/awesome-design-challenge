@@ -1,0 +1,86 @@
+.allocations-table{
+    width: 100%;
+    margin: 0 auto;
+    overflow-x: scroll;
+    direction: rtl;
+    white-space: nowrap;
+
+    table{
+        direction: ltr;
+        border-collapse: collapse;
+        td{
+            padding: 7.5px 10px;
+            @media (max-width: $mobileBreakpoint) {
+                padding: 2.5px 5px;
+            }
+        }
+
+        thead{
+            th{
+                background-color: $red;
+                border-radius: 5px;
+                color: $white;
+                padding: 5px 0;
+            }
+            td{
+                border: 1px solid $lightGray;
+            }
+        }
+        th[scope=row] {
+            border-radius: 0;
+            position: sticky;
+            left: 0;
+            z-index: 1;
+            background: $white;
+        }
+        .employee{
+            th{
+                padding-right:  1%;
+                text-align: left;
+                left: 0;
+                border-bottom: 1px solid $lightGray;
+                color: $dark;
+                @media (max-width: $mobileBreakpoint) {
+                    white-space: normal;
+                }
+            }
+            td{
+                background-color: #F3F3F3;
+                box-shadow: inset 1px 1px 3px 1px rgba(31, 31, 31, 0.25);
+                position: relative;
+                padding: 0;
+                border-bottom: 1px solid $lightGray;
+                .project{
+                    color: $white;
+                    margin: 0.5% 0;
+                    padding: 0.2% 1%;
+                    border-radius: 5px;
+                    text-align: right;
+                }
+
+                //projects-style
+                .mdrev{
+                    background-color: #87CC6F;
+                }
+                .localista{
+                    background-color: $dark;
+                }
+                .retaileye{
+                    background-color: #448ACB;
+                }
+                .marketing{
+                    background-color: #FB8B8B;
+                }
+                .rebranding{
+                    background-color: #e4590d;
+                }
+                .plae{
+                    background-color: #ffb5f6;
+                }
+                .sleassociates{
+                    background-color: #8a35c7;
+                }
+            }
+        }
+    }
+}

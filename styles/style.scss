@@ -1,12 +1,13 @@
 $dark: #1f1f1f;
 $gray: #444444;
-$lightGray: #c2c2c2;
+$lightGray: #999999;
 $red: #e21339;
 $white: #ffffff;
 
-$mobileBreakpoint: 375px;
+$mobileBreakpoint: 500px;
 
 @import './_profile';
+@import './project-allocations';
 
 *{
     margin: 0;
@@ -40,6 +41,9 @@ button{
     padding: 2%;
     border-radius: 5px;
     cursor: pointer;
+    &:focus{
+        outline: 0;
+    }
 }
 
 /*---------------SIDE-BAR---------------*/
@@ -137,10 +141,27 @@ button{
     top: 0;
     right: 0;
 
-    @media (max-width: $mobileBreakpoint) {
+    @media screen and (max-width: $mobileBreakpoint) {
         width: 100%;
     }
 }
+
+.display-container{
+    background-color: $white;
+    width: 95%;
+    left: 50%;
+    margin: 2% 0;
+    padding-bottom: 2%;
+    transform: translateX(-50%);
+    position: relative;
+    border-radius: 5px;
+    @media (max-width: $mobileBreakpoint) {
+        margin: 4% 0;
+        width: 90%;
+        padding: 2%;
+    }
+}
+
 
 .display-header{
     padding: 2% 0;
@@ -162,7 +183,7 @@ button{
     justify-content: flex-end;
     width: 40%;
     button{
-        margin: 0 1%;
+        margin-left: 1%;
         transition: 0.4s;
         &:hover{
             filter: drop-shadow(0px 1px 8px rgba(31, 31, 31, 0.3));
@@ -171,17 +192,10 @@ button{
     }
     @media (max-width: $mobileBreakpoint) {
         width: 100%;
-        padding: 0;
     }
 }
 
-.display-container{
-    background-color: $white;
-    width: 95%;
-    left: 50%;
-    margin: 2% 0;
-    padding-bottom: 2%;
-    transform: translateX(-50%);
-    position: relative;
-    border-radius: 5px;
+.info{
+    width: 94%;
+    margin: 2% auto;
 }
