@@ -9,35 +9,37 @@ $mobileBreakpoint: 500px;
 @import './_profile';
 @import './project-allocations';
 
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Space Mono', monospace;
 }
-body{
+
+body {
     background-color: $dark;
 }
-h2{
+h2 {
     font-size: 28px;
     @media (max-width: $mobileBreakpoint) {
         font-size: 16px;
     }
 }
-p,a,button,tr,th,label,input{
+p,a,button,tr,th,label,input {
     font-size: 14px;
+
     @media (max-width: $mobileBreakpoint) {
         font-size: 12px;
     }
 }
-th{
+th {
     color: $lightGray;
 }
-input,button,select{
-    &:focus{
+input,button,select {
+    &:focus {
         outline: 0;
     }
 }
-button{
+button {
     background-color: $red;
     color: $white;
     text-decoration: none;
@@ -48,9 +50,10 @@ button{
     cursor: pointer;
 }
 
-/*---------------SIDE-BAR---------------*/
-.side-bar{
-    background-color : $dark;
+
+/*-----------------SIDE-BAR----------------*/
+.side-bar {
+    background-color: $dark;
     width: 18%;
     height: 100%;
     position: fixed;
@@ -67,40 +70,49 @@ button{
     }
 }
 
-.side-bar-menu{
+.side-bar-menu {
     margin-top: 10%;
     padding: 0 10%;
-    ul li{
+
+    ul li {
         list-style: none;
         margin: 4% 0;
         position: relative;
         display: flex;
-        &:not(:first-child):not(:last-child){
+
+        &:not(:first-child):not(:last-child) {
             border-bottom: 2px solid $gray;
         }
     }
-    a{
+
+    a {
         width: 100%;
         text-decoration: none;
         color: $white;
-        &:hover{
+
+        &:hover {
             color: $red;
             transition: width 0.5s;
         }
     }
-    button{
+
+    button {
         width: 100%;
-        &:hover{
+
+        &:hover {
             background-color: $white;
             color: $red;
             transition: 0.5s;
-            a{
+
+            a {
                 color: $red;
             }
         }
     }
-    #close{
+
+    #close {
         display: none;
+
         @media (max-width: $mobileBreakpoint) {
             display: block;
             width: 10%;
@@ -111,7 +123,8 @@ button{
     }
 
 }
-.pop-up-menu{
+
+.pop-up-menu {
     display: none;
 
     @media (max-width: $mobileBreakpoint) {
@@ -119,6 +132,7 @@ button{
         display: block;
         top: 50%;
         transform: translateY(-50%);
+
         span {
             display: block;
             width: 25px;
@@ -127,13 +141,13 @@ button{
             position: relative;
             background: $red;
             z-index: 1;
-          }
+        }
     }
 }
 
 
-/*---------------MAIN-CONTAINER---------------*/
-.display{
+/*-----------------MAIN-CONTAINER----------------*/
+.display {
     background-color: $dark;
     width: 82%;
     position: absolute;
@@ -145,7 +159,7 @@ button{
     }
 }
 
-.display-container{
+.display-container {
     background-color: $white;
     min-height: 90vh;
     width: 95%;
@@ -155,6 +169,7 @@ button{
     transform: translateX(-50%);
     position: relative;
     border-radius: 5px;
+
     @media (max-width: $mobileBreakpoint) {
         margin: 4% 0;
         width: 90%;
@@ -164,7 +179,7 @@ button{
 }
 
 
-.display-header{
+.display-header {
     padding: 2% 0;
     width: 94%;
     margin: 0 auto;
@@ -179,24 +194,27 @@ button{
     }
 }
 
-.header-controls{
+.header-controls {
     display: flex;
     justify-content: flex-end;
     width: 40%;
-    button{
+
+    button {
         margin-left: 1%;
         transition: 0.4s;
-        &:hover{
+
+        &:hover {
             filter: drop-shadow(0px 1px 8px rgba(31, 31, 31, 0.3));
-            transform: scale(1.05 , 1.05);
+            transform: scale(1.05, 1.05);
         }
     }
+
     @media (max-width: $mobileBreakpoint) {
         width: 100%;
     }
 }
 
-.info{
+.info {
     width: 94%;
     margin: 2% auto;
 }

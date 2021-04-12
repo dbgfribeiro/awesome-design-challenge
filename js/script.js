@@ -1,7 +1,7 @@
 
 /*-------------MENU-------------*/
 
-$('#hamburguer').click(function() {
+$('.pop-up-menu').click(function() {
     $('#menu').animate({
         marginLeft: 0
     }); 
@@ -21,8 +21,6 @@ $('#new').click(function() {
         "display":"block",
     });
 });
-
-
 $('#back').click(function() {
     $('.display-allocations').css({
         "display":"block",

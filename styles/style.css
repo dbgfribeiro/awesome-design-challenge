@@ -105,6 +105,7 @@
   border-radius: 5px;
 }
 
+/*-------------ALLOCATIONS-CHART------------*/
 .allocations-info {
   width: 100%;
   margin: 0 auto;
@@ -117,11 +118,13 @@
   direction: ltr;
   border-collapse: collapse;
   width: 100%;
+  margin-top: 2%;
   position: relative;
 }
 
 .allocations-info table thead th {
   background-color: #e21339;
+  outline: 1px solid #ffffff;
   border-radius: 5px;
   color: #ffffff;
   padding: 7.5px 0;
@@ -151,14 +154,14 @@
   position: sticky;
   left: 0;
   z-index: 2;
-  background-color: #ffffff;
-  outline: 1px solid #ffffff;
+  background-color: #F3F3F3;
+  outline: 1px solid #F3F3F3;
   -webkit-box-shadow: 4px 0 3px -2px rgba(31, 31, 31, 0.35);
           box-shadow: 4px 0 3px -2px rgba(31, 31, 31, 0.35);
 }
 
 .allocations-info table .employee th {
-  padding: 0 15px;
+  padding: 10px 5px;
   text-align: left;
   left: 0;
   color: #1f1f1f;
@@ -172,8 +175,8 @@
 }
 
 .allocations-info table .employee:nth-child(even) th {
-  background-color: #F3F3F3;
-  outline: 1px solid #F3F3F3;
+  background-color: #ffffff;
+  outline: 1px solid #ffffff;
 }
 
 .allocations-info table .employee td {
@@ -228,6 +231,7 @@
   background-color: #8a35c7;
 }
 
+/*-------------NEW-ALLOCATIONS-FORM------------*/
 .display-new-allocation {
   display: none;
 }
@@ -244,7 +248,7 @@
 }
 
 .new-allocation form * {
-  width: 60%;
+  width: 70%;
   border-radius: 5px;
   -webkit-appearance: none;
 }
@@ -260,7 +264,12 @@
   font-weight: bolder;
 }
 
-.new-allocation form input[type=text], .new-allocation form input[type=date], .new-allocation form select {
+.new-allocation form label.required:after {
+  color: #e21339;
+  content: " *";
+}
+
+.new-allocation form input[type=text], .new-allocation form input[type=date], .new-allocation form input[type=number], .new-allocation form select {
   padding: 10px;
   margin: 8px 0;
   border: 1px solid #999999;
@@ -337,7 +346,7 @@ button {
   cursor: pointer;
 }
 
-/*---------------SIDE-BAR---------------*/
+/*-----------------SIDE-BAR----------------*/
 .side-bar {
   background-color: #1f1f1f;
   width: 18%;
@@ -440,7 +449,7 @@ button {
   }
 }
 
-/*---------------MAIN-CONTAINER---------------*/
+/*-----------------MAIN-CONTAINER----------------*/
 .display {
   background-color: #1f1f1f;
   width: 82%;
